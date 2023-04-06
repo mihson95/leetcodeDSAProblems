@@ -1,3 +1,12 @@
+## Problem Statement
+
+### Given a string s, rearrange the characters of s so that any two adjacent characters are not the same.
+### Return any possible rearrangement of s or return "" if not possible.
+
+problem url: https://leetcode.com/problems/reorganize-string/description/
+
+
+---
 ## Solution
 The first loop is used to fill the even indices of the v array with the most frequent character ch in s. The loop runs for mx times, where mx is the frequency of ch in s. The loop iterates through every other index of the array v, starting at index 0, and fills it with the value of ch. If the loop reaches an index greater than or equal to n (i.e., it goes out of bounds), it returns an empty string.
 The second loop iterates through the mp map, which contains the frequency of each character in s, and fills in the remaining odd indices of the v array with the other characters. For each character that is not ch, the loop runs k times, where k is the frequency of the character in s. The loop iterates through every other index of the v array, starting at index 1, and fills it with the value of the current character. If the loop reaches an index greater than or equal to n (i.e., it goes out of bounds), it sets i to 1 to fill in the next odd index.
